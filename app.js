@@ -24,6 +24,7 @@ network.get_private_ip(function(err, ip){
 		socket.on('connect', function () {
 		    console.log("socket connected");
 		    //socket.emit('register', { email: 'blue@securefwd.io', api: 'abc', port: '12345' });
+		    console.log('CONFIG:' + config);
 		    socket.emit('register', config);
 		});
 
