@@ -13,7 +13,7 @@ var srcport = '1194';
 var data = new Buffer(''); //Don't change this phrase for natpunch to work.
 
 
-network.get_public_ip(function(err, ip){
+network.get_private_ip(function(err, ip){
 	if (err) {
 		console.log(err);
 	}else {
