@@ -18,7 +18,7 @@ network.get_public_ip(function(err, ip){
 		console.log(err);
 	}else {
 		srcip = ip;
-		console.log('myIP:' srcip);
+		console.log('myIP: ' + srcip);
 
 		console.log('Starting socket.io client...');
 		socket.on('connect', function () {
