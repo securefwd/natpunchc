@@ -6,11 +6,12 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "socket.io-client": "",
-    "http": "",
-    "raw-socket": "",
-    "udp-packet": "",
-    "udp-header": "",
-    "ip-header": ""
+    "socket.io-client": "*",
+    "http": "*",
+    "raw-socket": "*",
+    "udp-packet": "*",
+    "udp-header": "*",
+    "ip-header": "*",
+    "network": "*"
   }
 }
