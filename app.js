@@ -8,7 +8,7 @@ var socket = io.connect(serverUrl);
 
 var srcip = '172.18.0.2';
 var srcport = '1194';
-var destip = '151.80.177.19';
+//var destip = '151.80.177.19';
 var data = new Buffer(''); //Don't change this phrase for natpunch to work.
 
 console.log('Starting socket.io client...');
@@ -19,7 +19,7 @@ socket.on('connect', function () {
 
 socket.on('udpfire', function(msg){
     	console.log('udpfire: ' + msg.port);
-	sendudp.sendudp(srcip, srcport, destip, msg.port, data);
+	sendudp.sendudp(srcip, srcport, msg.ip, msg.port, data);
 });
 
 setInterval(function() {
