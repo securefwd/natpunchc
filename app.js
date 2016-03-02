@@ -11,7 +11,7 @@ var socket = io.connect(serverUrl);
 var srcport = '1194';
 //var destip = '151.80.177.19';
 var data = new Buffer(''); //Don't change this phrase for natpunch to work.
-var config = fs.readFileSync('/persistant/natpunchc/config.json', 'utf8');
+var config = JSON.parse(fs.readFileSync('/persistant/natpunchc/config.json', 'utf8'));
 
 network.get_private_ip(function(err, ip){
 	if (err) {
@@ -24,6 +24,7 @@ network.get_private_ip(function(err, ip){
 		socket.on('connect', function () {
 		    console.log("socket connected");
 		    //socket.emit('register', { email: 'blue@securefwd.io', api: 'abc', port: '12345' });
+
 		    console.log('CONFIG:' + config);
 		    socket.emit('register', config);
 		});
